@@ -657,7 +657,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &32284768
 Transform:
   m_ObjectHideFlags: 0
@@ -3131,6 +3131,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sannkaku
       objectReference: {fileID: 0}
+    - target: {fileID: 4238555157184072803, guid: 757d6e535c046854e83baffaf02f0567,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5054297244525856981, guid: 757d6e535c046854e83baffaf02f0567,
         type: 3}
       propertyPath: m_RootOrder
@@ -3621,7 +3626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &362451850
 Transform:
   m_ObjectHideFlags: 0
@@ -4054,7 +4059,7 @@ PrefabInstance:
     - target: {fileID: 4238555157184072803, guid: 757d6e535c046854e83baffaf02f0567,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5054297244525856981, guid: 757d6e535c046854e83baffaf02f0567,
         type: 3}
@@ -4410,7 +4415,7 @@ PrefabInstance:
     - target: {fileID: 2572225338698561017, guid: de58ff8216104904690fd7870897c3e8,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6864689475130929487, guid: de58ff8216104904690fd7870897c3e8,
         type: 3}
@@ -5650,6 +5655,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sannkaku
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238555157184072803, guid: 757d6e535c046854e83baffaf02f0567,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5054297244525856981, guid: 757d6e535c046854e83baffaf02f0567,
         type: 3}
@@ -6921,7 +6931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &736631510
 Transform:
   m_ObjectHideFlags: 0
@@ -9734,7 +9744,7 @@ PrefabInstance:
     - target: {fileID: 2572225338698561017, guid: de58ff8216104904690fd7870897c3e8,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6864689475130929487, guid: de58ff8216104904690fd7870897c3e8,
         type: 3}
@@ -11878,7 +11888,7 @@ PrefabInstance:
     - target: {fileID: 4238555157184072803, guid: 757d6e535c046854e83baffaf02f0567,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5054297244525856981, guid: 757d6e535c046854e83baffaf02f0567,
         type: 3}
@@ -12103,7 +12113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1389635814
 Transform:
   m_ObjectHideFlags: 0
@@ -12635,7 +12645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1422107251
 Transform:
   m_ObjectHideFlags: 0
@@ -17806,6 +17816,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sannkaku
       objectReference: {fileID: 0}
+    - target: {fileID: 4238555157184072803, guid: 757d6e535c046854e83baffaf02f0567,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5054297244525856981, guid: 757d6e535c046854e83baffaf02f0567,
         type: 3}
       propertyPath: m_RootOrder
@@ -18118,6 +18133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c68b9d78e68084497bb21478fe6497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_playerObject: []
+  m_diceManneger: {fileID: 0}
 --- !u!212 &1338920793017216748
 SpriteRenderer:
   m_ObjectHideFlags: 0
