@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ShipManeger : MonoBehaviour
 {
@@ -10,6 +8,7 @@ public class ShipManeger : MonoBehaviour
     int m_get;
     public void NowShip()
     {
+        m_get = m_playerManeger.ShipInAir;
         for(int i = 0; i < m_get; i++)
         {
             m_kuukis[i].SetActive(false);
