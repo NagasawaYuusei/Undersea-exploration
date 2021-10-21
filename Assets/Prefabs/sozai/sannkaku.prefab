@@ -88,6 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5054297244525856981}
   - component: {fileID: 86346233831505760}
+  - component: {fileID: 1799394874399214887}
   m_Layer: 0
   m_Name: sannkaku
   m_TagString: sannkaku
@@ -160,6 +161,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1799394874399214887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4238555157184072803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70520b1fd724e064eb7f26a0c1abc7c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6250188620229639885
 GameObject:
   m_ObjectHideFlags: 0
