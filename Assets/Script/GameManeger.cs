@@ -6,6 +6,7 @@ public class GameManeger : MonoBehaviour
 {
     [SerializeField] GameObject m_backPanel;
     [SerializeField] GameObject m_serchPanel;
+    [SerializeField] GameObject m_isekiTipOku;
     [SerializeField] Animator m_shipAnim;
     [SerializeField] Animator m_diceAnim;
     [SerializeField] string m_shipAnimName;
@@ -37,12 +38,14 @@ public class GameManeger : MonoBehaviour
 
     public void Go()
     {
+        m_diceAnim.enabled = true;
         m_diceAnim.Play(m_randomDaiceAnimName);
     }
 
-    void Serch()//完成
+    public void Serch()//完成
     {
         m_serchPanel.SetActive(true);
+
     }
 
     public void Nanimosinai()//完成
