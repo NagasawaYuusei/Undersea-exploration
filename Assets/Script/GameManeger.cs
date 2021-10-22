@@ -6,7 +6,8 @@ public class GameManeger : MonoBehaviour
 {
     [SerializeField] GameObject m_backPanel;
     [SerializeField] GameObject m_serchPanel;
-    [SerializeField] Animator m_anim;
+    [SerializeField] Animator m_shipAnim;
+    [SerializeField] Animator m_diceAnim;
     [SerializeField] string m_shipAnimName;
     [SerializeField] string m_randomDaiceAnimName;
     [SerializeField] PlayerManeger m_playerManeger;
@@ -26,7 +27,7 @@ public class GameManeger : MonoBehaviour
         {
             m_playerManeger.PlayerTurn = 0;
         }
-        m_anim.Play(m_shipAnimName);
+        m_shipAnim.Play(m_shipAnimName);
     }
 
     void Back()//シップアニメーションの途中で呼ぶ
@@ -36,7 +37,7 @@ public class GameManeger : MonoBehaviour
 
     public void Go()
     {
-        m_anim.Play(m_randomDaiceAnimName);
+        m_diceAnim.Play(m_randomDaiceAnimName);
     }
 
     void Serch()//完成
