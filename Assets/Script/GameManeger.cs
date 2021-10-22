@@ -4,56 +4,65 @@ using UnityEngine;
 
 public class GameManeger : MonoBehaviour
 {
-    [SerializeField] GameObject m_back;
-    [SerializeField] GameObject m_SerchPanel;
-    [SerializeField] Animator m_daiceAnim;
+    [SerializeField] GameObject m_backPanel;
+    [SerializeField] GameObject m_serchPanel;
+    [SerializeField] GameObject m_isekiTipOku;
+    [SerializeField] Animator m_shipAnim;
+    [SerializeField] Animator m_diceAnim;
+    [SerializeField] string m_shipAnimName;
     [SerializeField] string m_randomDaiceAnimName;
+    [SerializeField] PlayerManeger m_playerManeger;
 
-    void Air()
+    public void GameStart()
     {
-        
+        Air();
     }
 
-    void Back()
+    public void Air()
     {
-        
+        if(m_playerManeger.PlayerNum > m_playerManeger.PlayerTurn)
+        {
+            m_playerManeger.PlayerTurn++;
+        }
+        else
+        {
+            m_playerManeger.PlayerTurn = 0;
+        }
+        m_shipAnim.Play(m_shipAnimName);
     }
 
-    void Go()
+    void Back()//シップアニメーションの途中で呼ぶ
     {
-        m_daiceAnim.Play(m_randomDaiceAnimName);
+        m_backPanel.SetActive(true);
     }
 
-    void Serch()//完成
+    public void Go()
     {
-        m_SerchPanel.SetActive(true);
+        m_diceAnim.enabled = true;
+        m_diceAnim.Play(m_randomDaiceAnimName);
     }
 
-    public void Yes()
+    public void Serch()//完成
     {
-        Go();
-    }
+        m_serchPanel.SetActive(true);
 
-    public void No()//完成
-    {
-        Go();
     }
 
     public void Nanimosinai()//完成
     {
-        m_SerchPanel.SetActive(false);
+        m_serchPanel.SetActive(false);
         Air();
     }
 
     public void Isekitippuwohirou()
     {
-        m_SerchPanel.SetActive(false);
+        m_serchPanel.SetActive(false);
         Air();
     }
 
     public void Isekitippuwooku()
     {
-        m_SerchPanel.SetActive(false);
+        m_serchPanel.SetActive(false);
         Air();
     }
 }
