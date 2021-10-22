@@ -9,6 +9,9 @@ public class Dice : MonoBehaviour
 
     [SerializeField] GameObject[] m_diceObjects;
     [SerializeField] Transform[] m_diceTransforms;
+    [SerializeField] Animator m_daiceAnim;
+    [SerializeField] PlayerManeger m_playerManeger;
+    [SerializeField] float m_stopTime = 2.0f;
     List<GameObject> m_dice = new List<GameObject>();
     private int m_randomDiceValue1;
     private int m_randomDiceValue2;
@@ -16,7 +19,6 @@ public class Dice : MonoBehaviour
     void Start()
     {
         SetUp();
-        RandomDice();
     }
 
     void SetUp()
@@ -36,7 +38,18 @@ public class Dice : MonoBehaviour
 
         dice1.transform.position = m_diceTransforms[0].position;
         dice2.transform.position = m_diceTransforms[1].position;
+    }
 
+    public void Stop()
+    {
+        m_daiceAnim.enabled = false;
+        RandomDice();
+        StartCoroutine(Move());
+    }
 
+    IEnumerator Move()
+    {
+        yield return new WaitForSeconds(m_stopTime);
+        m_playerManeger.MoveOn();
     }
 }
