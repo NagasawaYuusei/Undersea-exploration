@@ -7,20 +7,13 @@ using UnityEngine.Events;
 public class ResultManeger : MonoBehaviour
 {
 
-<<<<<<< HEAD
-    int[] m_sankakuGetRemains = new int[] { 2, 3, 1, 1, 1, 0 };
-    int[] m_sikakuGetRemains = new int[] { 0, 0, 0, 1, 6, 1 };
-    int[] m_gokakuGetRemains = new int[] { 2 };
-    int[] m_rokukakuGetRemains = new int[] { 2 };
-=======
     //渡していただくもの
-    [SerializeField]int m_playerNum = 6;//プレイヤーの人数(m_playerCountとは異なります)　　　　　　　　　　
-    int[] m_sankakuGetRemains = new int[] { 2, 3, 1, 1, 1, 0 };
+    [SerializeField, Range(2, 6)] int m_playerNum = 6;//プレイヤーの人数(m_playerCountとは異なります)　　　　　　　　　　
+    int[] m_sankakuGetRemains = new int[] { 2, 2, 1, 1, 1, 1 };
     int[] m_sikakuGetRemains = new int[] { 0, 0, 1, 1, 5, 1 };
     int[] m_gokakuGetRemains = new int[] { 2, 3, 2, 1, 0, 0 };
     int[] m_rokukakuGetRemains = new int[] { 2, 2, 1, 1, 1, 1 };
     //ここまでの情報をください！
->>>>>>> 7df3bb978efe0f8f6bd506cba98583996435b714
 
     [SerializeField] TextMeshProUGUI m_scoreText;
     [SerializeField] TextMeshProUGUI m_toPlayer2Text;
@@ -29,13 +22,23 @@ public class ResultManeger : MonoBehaviour
     [SerializeField] TextMeshProUGUI m_toPlayer5Text;
     [SerializeField] TextMeshProUGUI m_toPlayer6Text;
     [SerializeField] UnityEvent m_finishResultEvent;
+
     [SerializeField] List<GameObject> m_sankakuRemains = new List<GameObject>();
     [SerializeField] List<GameObject> m_sikakuRemains = new List<GameObject>();
     [SerializeField] List<GameObject> m_gokakuRemains = new List<GameObject>();
     [SerializeField] List<GameObject> m_rokukakuRemains = new List<GameObject>();
     int m_playerCounter;
-
-    GameObject[] m_playerSankakuRemains;
+    List<GameObject> m_initialSankakuRemains = new List<GameObject>();
+    List<GameObject> m_initialSikakuRemains = new List<GameObject>();
+    List<GameObject> m_initialGokakuRemains = new List<GameObject>();
+    List<GameObject> m_initialoldRokukakuRemains = new List<GameObject>();
+    private void Start()
+    {
+        m_initialSankakuRemains.AddRange(m_sankakuRemains);
+        m_initialSikakuRemains.AddRange(m_sikakuRemains);
+        m_initialGokakuRemains.AddRange(m_gokakuRemains);
+        m_initialoldRokukakuRemains.AddRange(m_rokukakuRemains);
+    }
     public void Result()
     {
         //foreach (var s in m_sankakuRemains)
@@ -54,7 +57,13 @@ public class ResultManeger : MonoBehaviour
         //{
         //    s.SetActive(false);
         //}
-        
+        //if (m_playerSankakuRemains != null)
+        //{
+        //    foreach (var s in m_playerSankakuRemains)
+        //    {
+        //        Destroy(s);
+        //    }
+        //}
 
         m_playerCounter++;
         Sannkaku();
@@ -65,16 +74,16 @@ public class ResultManeger : MonoBehaviour
 
     void Score()
     {
-        
+
     }
 
     void Sannkaku()
     {
-<<<<<<< HEAD
-        for (int i = 0; i < m_sankakuGetRemains[m_playerNum - 1]; i++)
-=======
+        foreach (var s in m_initialSankakuRemains)
+        {
+            s.SetActive(false);
+        }
         for (int i = 0; i < m_sankakuGetRemains[m_playerCounter - 1]; i++)
->>>>>>> 7df3bb978efe0f8f6bd506cba98583996435b714
         {
             int random = Random.Range(0, m_sankakuRemains.Count);
             m_sankakuRemains[random].SetActive(true);
@@ -84,6 +93,10 @@ public class ResultManeger : MonoBehaviour
 
     void Sikaku()
     {
+        foreach (var s in m_initialSikakuRemains)
+        {
+            s.SetActive(false);
+        }
         for (int i = 0; i < m_sikakuGetRemains[m_playerCounter - 1]; i++)
         {
             int random = Random.Range(0, m_sikakuRemains.Count);
@@ -93,6 +106,10 @@ public class ResultManeger : MonoBehaviour
     }
     void Gokaku()
     {
+        foreach (var s in m_initialGokakuRemains)
+        {
+            s.SetActive(false);
+        }
         for (int i = 0; i < m_gokakuGetRemains[m_playerCounter - 1]; i++)
         {
             int random = Random.Range(0, m_gokakuRemains.Count);
@@ -103,6 +120,10 @@ public class ResultManeger : MonoBehaviour
 
     void Rokukaku()
     {
+        foreach (var s in m_initialoldRokukakuRemains)
+        {
+            s.SetActive(false);
+        }
         for (int i = 0; i < m_rokukakuGetRemains[m_playerCounter - 1]; i++)
         {
             int random = Random.Range(0, m_rokukakuRemains.Count);
@@ -117,7 +138,7 @@ public class ResultManeger : MonoBehaviour
         {
             Destroy(m_playerSankakuRemains[i]);
         }*/
-        if(m_playerNum == 3)
+        if (m_playerNum == 2)
         {
             m_toPlayer3Text.text = "Finish Game";
         }
@@ -128,12 +149,12 @@ public class ResultManeger : MonoBehaviour
         {
             Destroy(m_playerSankakuRemains[i]);
         }*/
-        if (m_playerNum == 4)
+        if (m_playerNum == 3)
         {
             m_toPlayer4Text.text = "Finish Game";
             Result();
         }
-        else if(m_playerNum >= 3)
+        else if (m_playerNum >= 3)
         {
             Result();
         }
@@ -148,7 +169,7 @@ public class ResultManeger : MonoBehaviour
         {
             Destroy(m_playerSankakuRemains[i]);
         }*/
-        if (m_playerNum == 5)
+        if (m_playerNum == 4)
         {
             m_toPlayer5Text.text = "Finish Game";
             Result();
@@ -168,7 +189,12 @@ public class ResultManeger : MonoBehaviour
         {
             Destroy(m_playerSankakuRemains[i]);
         }*/
-        if (m_playerNum >= 5)
+        if (m_playerNum == 5)
+        {
+            m_toPlayer6Text.text = "Finish Game";
+            Result();
+        }
+        else if (m_playerNum >= 5)
         {
             Result();
         }
@@ -194,7 +220,6 @@ public class ResultManeger : MonoBehaviour
     }
     public void FinishResult()
     {
-        Destroy(m_playerSankakuRemains[0]);
         m_finishResultEvent.Invoke();
     }
 }
