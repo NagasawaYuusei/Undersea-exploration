@@ -347,6 +347,7 @@ RectTransform:
   m_Children:
   - {fileID: 1354166979}
   - {fileID: 1064497630}
+  - {fileID: 929619020}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -489,6 +490,140 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108218700}
+  m_CullTransparentMesh: 0
+--- !u!1 &192265032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 192265033}
+  - component: {fileID: 192265035}
+  - component: {fileID: 192265034}
+  m_Layer: 5
+  m_Name: Winner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &192265033
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192265032}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 929619020}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 429}
+  m_SizeDelta: {x: 247.7, y: 100.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &192265034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192265032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "\u52DD\u8005"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ac6c535049eada54cab20e4bcdde2090, type: 2}
+  m_sharedMaterial: {fileID: -6474861756696573815, guid: ac6c535049eada54cab20e4bcdde2090,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 99.4
+  m_fontSizeBase: 99.4
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &192265035
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192265032}
   m_CullTransparentMesh: 0
 --- !u!1 &211155411
 GameObject:
@@ -757,6 +892,140 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320555908}
+  m_CullTransparentMesh: 0
+--- !u!1 &325480140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 325480141}
+  - component: {fileID: 325480143}
+  - component: {fileID: 325480142}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &325480141
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325480140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 929619020}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 952.2, y: 260.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &325480142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325480140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Player1
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ac6c535049eada54cab20e4bcdde2090, type: 2}
+  m_sharedMaterial: {fileID: -6474861756696573815, guid: ac6c535049eada54cab20e4bcdde2090,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 232.6
+  m_fontSizeBase: 232.6
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &325480143
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325480140}
   m_CullTransparentMesh: 0
 --- !u!1 &462184610
 GameObject:
@@ -1437,6 +1706,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_sankakuRemains:
   - {fileID: 4238555155525356456}
   - {fileID: 4238555156368148604}
@@ -1473,6 +1753,79 @@ MonoBehaviour:
   - {fileID: 511747297412645732}
   - {fileID: 511747296901934806}
   - {fileID: 511747297930514887}
+  m_sankakuText:
+  - {fileID: 6661040585131701133}
+  - {fileID: 6661040585462788185}
+  - {fileID: 6661040583929692506}
+  - {fileID: 6661040585447091282}
+  - {fileID: 6661040584634715445}
+  - {fileID: 6661040584366989522}
+  - {fileID: 6661040585579360621}
+  - {fileID: 6661040584893289526}
+  m_sikauText:
+  - {fileID: 4976753818036915158}
+  - {fileID: 4976753818443984372}
+  - {fileID: 4976753817230111755}
+  - {fileID: 4976753817152822234}
+  - {fileID: 4976753818570549473}
+  - {fileID: 4976753818305489506}
+  - {fileID: 4976753818866094041}
+  - {fileID: 4976753817682914583}
+  m_gokakuText:
+  - {fileID: 6265633419338710811}
+  - {fileID: 6265633417825877335}
+  - {fileID: 6265633418557875295}
+  - {fileID: 6265633417734677378}
+  - {fileID: 6265633418710894096}
+  - {fileID: 6265633418027895059}
+  - {fileID: 6265633419048197680}
+  - {fileID: 6265633419656293932}
+  m_rokukakuText:
+  - {fileID: 7041533182313303090}
+  - {fileID: 7041533182665333540}
+  - {fileID: 7041533181749390371}
+  - {fileID: 7041533182776541559}
+  - {fileID: 7041533183166421542}
+  - {fileID: 7041533183687228225}
+  - {fileID: 7041533183092479731}
+  - {fileID: 7041533181965330914}
+--- !u!1 &929619019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929619020}
+  m_Layer: 5
+  m_Name: Winner Result UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &929619020
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929619019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 192265033}
+  - {fileID: 325480141}
+  m_Father: {fileID: 96289765}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &979226026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,7 +1976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1064497630
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4621,7 +4974,7 @@ GameObject:
   - component: {fileID: 2770554781402594988}
   - component: {fileID: 7041533183166421542}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RokukakuText5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4639,7 +4992,7 @@ GameObject:
   - component: {fileID: 2770554781345395321}
   - component: {fileID: 7041533183092479731}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RokukakuText7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4657,7 +5010,7 @@ GameObject:
   - component: {fileID: 2770554781549585917}
   - component: {fileID: 7041533182776541559}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RokukakuText4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4675,7 +5028,7 @@ GameObject:
   - component: {fileID: 2770554781923352523}
   - component: {fileID: 7041533183687228225}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RokukakuText6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4693,7 +5046,7 @@ GameObject:
   - component: {fileID: 2770554782365715816}
   - component: {fileID: 7041533181965330914}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RokukakuText8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4711,7 +5064,7 @@ GameObject:
   - component: {fileID: 2770554782686644393}
   - component: {fileID: 7041533181749390371}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RokukakuText3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4729,7 +5082,7 @@ GameObject:
   - component: {fileID: 2770554783048990638}
   - component: {fileID: 7041533182665333540}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RokukakuText2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4747,7 +5100,7 @@ GameObject:
   - component: {fileID: 2770554783233829048}
   - component: {fileID: 7041533182313303090}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RokukakuText1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5965,7 +6318,7 @@ GameObject:
   - component: {fileID: 205629292559485310}
   - component: {fileID: 4976753818443984372}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SikakuText2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5983,7 +6336,7 @@ GameObject:
   - component: {fileID: 205629292420959976}
   - component: {fileID: 4976753818305489506}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SikakuText6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6001,7 +6354,7 @@ GameObject:
   - component: {fileID: 205629292689272668}
   - component: {fileID: 4976753818036915158}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SIkakuText1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6019,7 +6372,7 @@ GameObject:
   - component: {fileID: 205629292998388563}
   - component: {fileID: 4976753818866094041}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SikakuText7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6037,7 +6390,7 @@ GameObject:
   - component: {fileID: 205629293239667819}
   - component: {fileID: 4976753818570549473}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SikakuText5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6055,7 +6408,7 @@ GameObject:
   - component: {fileID: 205629293493063809}
   - component: {fileID: 4976753817230111755}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SikakuText3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6073,7 +6426,7 @@ GameObject:
   - component: {fileID: 205629293952696144}
   - component: {fileID: 4976753817152822234}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SikakuText4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6091,7 +6444,7 @@ GameObject:
   - component: {fileID: 205629294482770333}
   - component: {fileID: 4976753817682914583}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SIkakuText8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7021,7 +7374,7 @@ GameObject:
   - component: {fileID: 1242555477258107578}
   - component: {fileID: 6265633419048197680}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GokakuText7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7039,7 +7392,7 @@ GameObject:
   - component: {fileID: 1242555477457642138}
   - component: {fileID: 6265633418710894096}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GokakuText5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7057,7 +7410,7 @@ GameObject:
   - component: {fileID: 1242555477866154662}
   - component: {fileID: 6265633419656293932}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GokakuText8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7075,7 +7428,7 @@ GameObject:
   - component: {fileID: 1242555478085442449}
   - component: {fileID: 6265633419338710811}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GokakuText1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7093,7 +7446,7 @@ GameObject:
   - component: {fileID: 1242555478385290649}
   - component: {fileID: 6265633418027895059}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GokakuText6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7111,7 +7464,7 @@ GameObject:
   - component: {fileID: 1242555478183221725}
   - component: {fileID: 6265633417825877335}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GokakuText2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7129,7 +7482,7 @@ GameObject:
   - component: {fileID: 1242555478612117256}
   - component: {fileID: 6265633417734677378}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GokakuText4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7147,7 +7500,7 @@ GameObject:
   - component: {fileID: 1242555478898442453}
   - component: {fileID: 6265633418557875295}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GokakuText3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7333,7 +7686,7 @@ GameObject:
   - component: {fileID: 1998108278315046663}
   - component: {fileID: 6661040585131701133}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SankakuText1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7351,7 +7704,7 @@ GameObject:
   - component: {fileID: 1998108278613487804}
   - component: {fileID: 6661040584893289526}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SankakuText8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7369,7 +7722,7 @@ GameObject:
   - component: {fileID: 1998108278745896423}
   - component: {fileID: 6661040585579360621}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SankakuText7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7387,7 +7740,7 @@ GameObject:
   - component: {fileID: 1998108279167305944}
   - component: {fileID: 6661040585447091282}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SankakuText4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7405,7 +7758,7 @@ GameObject:
   - component: {fileID: 1998108279166227667}
   - component: {fileID: 6661040585462788185}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SankakuText2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7423,7 +7776,7 @@ GameObject:
   - component: {fileID: 1998108279780632016}
   - component: {fileID: 6661040583929692506}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SankakuText3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7441,7 +7794,7 @@ GameObject:
   - component: {fileID: 1998108279948749247}
   - component: {fileID: 6661040584634715445}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SankakuText5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7459,7 +7812,7 @@ GameObject:
   - component: {fileID: 1998108280217912408}
   - component: {fileID: 6661040584366989522}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SanakuText6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
