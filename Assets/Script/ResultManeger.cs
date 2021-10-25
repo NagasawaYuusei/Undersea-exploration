@@ -6,21 +6,25 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ResultManeger : MonoBehaviour
-{   
+{
     //渡していただくもの
     [SerializeField, Range(2, 6)] int m_playerNum = 6;//プレイヤーの人数(m_playerCountとは異なります)　　　　　　　　　　
     int[] m_sankakuGetRemains = new int[] { 2, 2, 1, 1, 1, 1 };
     int[] m_sikakuGetRemains = new int[] { 0, 0, 1, 1, 5, 1 };
     int[] m_gokakuGetRemains = new int[] { 2, 3, 2, 1, 0, 0 };
     int[] m_rokukakuGetRemains = new int[] { 2, 2, 1, 1, 1, 1 };
+    [SerializeField] List<string> m_playerName = new List<string>();
     //ここまでの情報をください！
 
     [SerializeField] TextMeshProUGUI m_scoreText;
+    [SerializeField] TextMeshProUGUI m_winningPlayerText;
+    [SerializeField] TextMeshProUGUI m_winningPlayerScoreText;
     [SerializeField] TextMeshProUGUI m_toPlayer2Text;
     [SerializeField] TextMeshProUGUI m_toPlayer3Text;
     [SerializeField] TextMeshProUGUI m_toPlayer4Text;
     [SerializeField] TextMeshProUGUI m_toPlayer5Text;
     [SerializeField] TextMeshProUGUI m_toPlayer6Text;
+
     [SerializeField] UnityEvent m_finishResultEvent;
 
     [SerializeField] List<GameObject> m_sankakuRemains = new List<GameObject>();
@@ -40,6 +44,8 @@ public class ResultManeger : MonoBehaviour
 
     int m_playerCounter;
     int m_scoreSum;
+    int m_maxScore;
+    string m_maxScorePlayer;
     private void Start()
     {
         m_initialSankakuRemains.AddRange(m_sankakuRemains);
@@ -58,7 +64,14 @@ public class ResultManeger : MonoBehaviour
     }
     void Score()
     {
+        if(m_scoreSum > m_maxScore)
+        {
+            m_maxScore = m_scoreSum;
+            m_maxScorePlayer = m_playerName[m_playerCounter - 1];
+        }
+
         m_scoreText.text = "合計点数:" + m_scoreSum.ToString();
+
         m_scoreSum = 0;
     }
     void Sannkaku()
@@ -148,7 +161,7 @@ public class ResultManeger : MonoBehaviour
         }
         else
         {
-            m_finishResultEvent.Invoke();
+            FinishResult();
         }
     }
     public void ToPlayer4()
@@ -164,7 +177,7 @@ public class ResultManeger : MonoBehaviour
         }
         else
         {
-            m_finishResultEvent.Invoke();
+            FinishResult();
         }
     }
     public void ToPlayer5()
@@ -180,7 +193,7 @@ public class ResultManeger : MonoBehaviour
         }
         else
         {
-            m_finishResultEvent.Invoke();
+            FinishResult();
         }
     }
     public void ToPlayer6()
@@ -191,12 +204,14 @@ public class ResultManeger : MonoBehaviour
         }
         else
         {
-            m_finishResultEvent.Invoke();
+            FinishResult();
         }
     }
     public void FinishResult()
     {
+        m_winningPlayerText.text = m_maxScorePlayer;
+        m_winningPlayerScoreText.text = "得点:" + m_maxScore.ToString();
 
-        m_finishResultEvent.Invoke();
+        m_finishResultEvent.Invoke(); 
     }
 }
