@@ -19,6 +19,14 @@ public class ResultManeger : MonoBehaviour
     [SerializeField] TextMeshProUGUI m_scoreText;
     [SerializeField] TextMeshProUGUI m_winningPlayerText;
     [SerializeField] TextMeshProUGUI m_winningPlayerScoreText;
+
+    [SerializeField] TextMeshProUGUI m_player1Text;
+    [SerializeField] TextMeshProUGUI m_player2Text;
+    [SerializeField] TextMeshProUGUI m_player3Text;
+    [SerializeField] TextMeshProUGUI m_player4Text;
+    [SerializeField] TextMeshProUGUI m_player5Text;
+    [SerializeField] TextMeshProUGUI m_player6Text;
+
     [SerializeField] TextMeshProUGUI m_toPlayer2Text;
     [SerializeField] TextMeshProUGUI m_toPlayer3Text;
     [SerializeField] TextMeshProUGUI m_toPlayer4Text;
@@ -52,6 +60,12 @@ public class ResultManeger : MonoBehaviour
         m_initialSikakuRemains.AddRange(m_sikakuRemains);
         m_initialGokakuRemains.AddRange(m_gokakuRemains);
         m_initialoldRokukakuRemains.AddRange(m_rokukakuRemains);
+        m_player1Text.text = m_playerName[0];
+        m_player2Text.text = m_playerName[1];
+        m_player3Text.text = m_playerName[2];
+        m_player4Text.text = m_playerName[3];
+        m_player5Text.text = m_playerName[4];
+        m_player6Text.text = m_playerName[5];
     }
     public void Result()
     {
