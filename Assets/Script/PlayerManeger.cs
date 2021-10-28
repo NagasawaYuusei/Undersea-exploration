@@ -47,6 +47,22 @@ public class PlayerManeger : MonoBehaviour
             return m_shipInAir;
         }
     }
+    
+    public GameObject[] Mass
+    {
+        get
+        {
+            return m_mass;
+        }
+    }
+
+    public int[] PlayerMass
+    {
+        get
+        {
+            return m_playerMass;
+        }
+    }
 
     /// <summary>
     /// カプセル化終了
