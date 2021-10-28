@@ -11,10 +11,16 @@ public class PlayerManeger : MonoBehaviour
     bool[] m_playerBack;
     [SerializeField] float m_stopTime = 1.0f;
     [SerializeField] GameObject[] m_playerObject;
-    [SerializeField] GameManeger m_gameManeger;
-    [SerializeField] Dice m_diceManeger;
     [SerializeField] GameObject m_dicePanel;
     [SerializeField] GameObject[] m_mass;
+    public List<GameObject[]> m_playerGetRemains0 = new List<GameObject[]>();
+    public List<GameObject[]> m_playerGetRemains1 = new List<GameObject[]>();
+    public List<GameObject[]> m_playerGetRemains2 = new List<GameObject[]>();
+    public List<GameObject[]> m_playerGetRemains3 = new List<GameObject[]>();
+    public List<GameObject[]> m_playerGetRemains4 = new List<GameObject[]>();
+    public List<GameObject[]> m_playerGetRemains5 = new List<GameObject[]>();
+    [SerializeField] GameManeger m_gameManeger;
+    [SerializeField] Dice m_diceManeger;
 
     int m_shipInAir;
     /// <summary>
@@ -61,6 +67,18 @@ public class PlayerManeger : MonoBehaviour
         get
         {
             return m_playerMass;
+        }
+    }
+
+    public int[] PlayerGet
+    {
+        get
+        {
+            return m_playerGet;
+        }
+        set
+        {
+            m_playerGet = value;
         }
     }
 

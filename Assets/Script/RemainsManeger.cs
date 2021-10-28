@@ -18,7 +18,6 @@ public class RemainsManeger : MonoBehaviour
 private void Start()
     {
         SetUp();
-        Set();
         SetBoard();
     }
 
@@ -47,11 +46,11 @@ private void Start()
     }
     void Set()
     {
-        m_remainsRemaining = m_remainsRemaining - 9;
-        m_remains.RemoveRange(0, 6);
-        m_remains.RemoveRange(8, 3);
-        m_playerResult = new int[] { 2, 1, 4 };
-        m_remainsResult = new int[4, 4] { { 1, 2, 0, 0 }, { 1, 1, 2, 2 }, { 0, 0, 0, 0 }, { 1, 1, 1, 0 } };
+        m_remainsRemaining = m_remainsRemaining - 9; //ボードに残っているリマインズ
+        m_remains.RemoveRange(0, 6);//
+        m_remains.RemoveRange(8, 3);//
+        m_playerResult = new int[] { 2, 1, 4 };//奥にいたプレイヤー順
+        m_remainsResult = new int[4, 4] { { 1, 2, 0, 0 }, { 1, 1, 2, 2 }, { 0, 0, 0, 0 }, { 1, 1, 1, 0 } };//落としたリマインズ
     }
     public void SetBoard()
     {
