@@ -15,6 +15,15 @@ public class RemainsManeger : MonoBehaviour
     int m_remainsRemaining;
     int[] m_playerResult;
     int[,] m_remainsResult;
+    int m_maxBoard;
+
+    public int MaxBoard
+    {
+        get
+        {
+            return m_maxBoard;
+        }
+    }
 private void Start()
     {
         SetUp();
@@ -59,18 +68,22 @@ private void Start()
             if(m_remains[s] == m_sannkakuObject && s < m_remainsRemaining)
             {
                 Instantiate(m_sannkakuObject, m_space[s].transform);
+                m_maxBoard++;
             }
             else if(m_remains[s] == m_sikakuObject && s < m_remainsRemaining)
             {
                 Instantiate(m_sikakuObject, m_space[s].transform);
+                m_maxBoard++;
             }
             else if(m_remains[s] == m_gokakukeiObject && s < m_remainsRemaining)
             {
                 Instantiate(m_gokakukeiObject, m_space[s].transform);
+                m_maxBoard++;
             }
             else if(m_remains[s] == m_rokukakukeiObject && s < m_remainsRemaining)
             {
                 Instantiate(m_rokukakukeiObject, m_space[s].transform);
+                m_maxBoard++;
             }
         }
 
@@ -98,6 +111,7 @@ private void Start()
                         Instantiate(m_rokukakukeiObject, m_space[m_remainsRemaining + i].transform);
                     }
                 }
+                m_maxBoard++;
             }
             else if (m_playerResult[i] == 2)
             {
@@ -120,6 +134,7 @@ private void Start()
                         Instantiate(m_rokukakukeiObject, m_space[m_remainsRemaining + i].transform);
                     }
                 }
+                m_maxBoard++;
             }
             else if (m_playerResult[i] == 3)
             {
@@ -142,6 +157,7 @@ private void Start()
                         Instantiate(m_rokukakukeiObject, m_space[m_remainsRemaining + i].transform);
                     }
                 }
+                m_maxBoard++;
             }
             else if(m_playerResult[i] == 4)
             {
@@ -164,6 +180,7 @@ private void Start()
                         Instantiate(m_rokukakukeiObject, m_space[m_remainsRemaining + i].transform);
                     }
                 }
+                m_maxBoard++;
             }
             else if (m_playerResult[i] == 5)
             {
@@ -186,6 +203,7 @@ private void Start()
                         Instantiate(m_rokukakukeiObject, m_space[m_remainsRemaining + i].transform);
                     }
                 }
+                m_maxBoard++;
             }
             else if (m_playerResult[i] == 6)
             {
@@ -208,12 +226,8 @@ private void Start()
                         Instantiate(m_rokukakukeiObject, m_space[m_remainsRemaining + i].transform);
                     }
                 }
+                m_maxBoard++;
             }
         }
-    }
-
-    public void GetRemain()
-    {
-
     }
 }

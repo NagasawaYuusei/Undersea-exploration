@@ -21,6 +21,7 @@ public class PlayerManeger : MonoBehaviour
     public List<GameObject[]> m_playerGetRemains5 = new List<GameObject[]>();
     [SerializeField] GameManeger m_gameManeger;
     [SerializeField] Dice m_diceManeger;
+    [SerializeField] RemainsManeger m_remainsManager;
 
     int m_shipInAir;
     /// <summary>
@@ -158,13 +159,19 @@ public class PlayerManeger : MonoBehaviour
                     {
                         count++;
                     }
-                    else
+                    else if(m_remainsManager.MaxBoard > m_playerMass[0] + count)
                     {
                         m_mass[m_playerMass[0] + count].transform.parent = m_playerObject[0].transform;
                         m_playerObject[0].transform.position = new Vector3(0, 0, 0);
                         yield return new WaitForSeconds(m_stopTime);
                         m_playerMass[0] += count;
                         count = 1;
+                    }
+                    else
+                    {
+                        m_mass[m_remainsManager.MaxBoard - 1].transform.parent = m_playerObject[0].transform;
+                        m_playerObject[0].transform.position = new Vector3(0, 0, 0);
+                        m_playerMass[0] = m_remainsManager.MaxBoard - 1;
                     }
                 }
                 else
@@ -191,13 +198,19 @@ public class PlayerManeger : MonoBehaviour
                     {
                         count++;
                     }
-                    else
+                    else if (m_remainsManager.MaxBoard > m_playerMass[1] + count)
                     {
                         m_mass[m_playerMass[1] + count].transform.parent = m_playerObject[1].transform;
                         m_playerObject[1].transform.position = new Vector3(0, 0, 0);
                         yield return new WaitForSeconds(m_stopTime);
                         m_playerMass[1] += count;
                         count = 1;
+                    }
+                    else
+                    {
+                        m_mass[m_remainsManager.MaxBoard - 1].transform.parent = m_playerObject[1].transform;
+                        m_playerObject[1].transform.position = new Vector3(0, 0, 0);
+                        m_playerMass[1] = m_remainsManager.MaxBoard - 1;
                     }
                 }
                 else
@@ -224,13 +237,19 @@ public class PlayerManeger : MonoBehaviour
                     {
                         count++;
                     }
-                    else
+                    else if (m_remainsManager.MaxBoard > m_playerMass[2] + count)
                     {
                         m_mass[m_playerMass[2] + count].transform.parent = m_playerObject[2].transform;
                         m_playerObject[2].transform.position = new Vector3(0, 0, 0);
                         yield return new WaitForSeconds(m_stopTime);
                         m_playerMass[2] += count;
                         count = 1;
+                    }
+                    else
+                    {
+                        m_mass[m_remainsManager.MaxBoard - 1].transform.parent = m_playerObject[2].transform;
+                        m_playerObject[2].transform.position = new Vector3(0, 0, 0);
+                        m_playerMass[2] = m_remainsManager.MaxBoard - 1;
                     }
                 }
                 else
@@ -257,13 +276,19 @@ public class PlayerManeger : MonoBehaviour
                     {
                         count++;
                     }
-                    else
+                    else if (m_remainsManager.MaxBoard > m_playerMass[3] + count)
                     {
                         m_mass[m_playerMass[3] + count].transform.parent = m_playerObject[3].transform;
                         m_playerObject[3].transform.position = new Vector3(0, 0, 0);
                         yield return new WaitForSeconds(m_stopTime);
                         m_playerMass[3] += count;
                         count = 1;
+                    }
+                    else
+                    {
+                        m_mass[m_remainsManager.MaxBoard - 1].transform.parent = m_playerObject[3].transform;
+                        m_playerObject[3].transform.position = new Vector3(0, 0, 0);
+                        m_playerMass[3] = m_remainsManager.MaxBoard - 1;
                     }
                 }
                 else
@@ -290,13 +315,19 @@ public class PlayerManeger : MonoBehaviour
                     {
                         count++;
                     }
-                    else
+                    else if (m_remainsManager.MaxBoard > m_playerMass[4] + count)
                     {
                         m_mass[m_playerMass[4] + count].transform.parent = m_playerObject[4].transform;
                         m_playerObject[4].transform.position = new Vector3(0, 0, 0);
                         yield return new WaitForSeconds(m_stopTime);
                         m_playerMass[4] += count;
                         count = 1;
+                    }
+                    else
+                    {
+                        m_mass[m_remainsManager.MaxBoard - 1].transform.parent = m_playerObject[4].transform;
+                        m_playerObject[4].transform.position = new Vector3(0, 0, 0);
+                        m_playerMass[4] = m_remainsManager.MaxBoard - 1;
                     }
                 }
                 else
@@ -323,13 +354,19 @@ public class PlayerManeger : MonoBehaviour
                     {
                         count++;
                     }
-                    else
+                    else if (m_remainsManager.MaxBoard > m_playerMass[5] + count)
                     {
                         m_mass[m_playerMass[5] + count].transform.parent = m_playerObject[5].transform;
                         m_playerObject[5].transform.position = new Vector3(0, 0, 0);
                         yield return new WaitForSeconds(m_stopTime);
                         m_playerMass[5] += count;
                         count = 1;
+                    }
+                    else
+                    {
+                        m_mass[m_remainsManager.MaxBoard - 1].transform.parent = m_playerObject[5].transform;
+                        m_playerObject[5].transform.position = new Vector3(0, 0, 0);
+                        m_playerMass[5] = m_remainsManager.MaxBoard - 1;
                     }
                 }
                 else

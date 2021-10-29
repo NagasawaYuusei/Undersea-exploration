@@ -176,31 +176,157 @@ public class GameManeger : MonoBehaviour
 
     public void One()
     {
+        var remains = m_nonePotisions[0];
 
+        GameObject[] childObject = new GameObject[remains.transform.childCount];
+
+        m_playerManeger.m_playerGetRemains1.RemoveAt(0);
+
+        for (int i = 0; i < remains.transform.childCount; i++)
+        {
+            childObject[i] = remains.transform.GetChild(i).gameObject;
+        }
+
+        Destroy(m_playerManeger.Mass[m_playerManeger.PlayerMass[m_playerManeger.PlayerTurn]].transform.parent);
+        foreach (var g in childObject)
+            Instantiate(g, m_playerManeger.Mass[m_playerManeger.PlayerMass[m_playerManeger.PlayerTurn]].transform);
+        m_playerManeger.PlayerGet[m_playerManeger.PlayerTurn]--;
+        for(int i = 0; i < m_nonePotisions.Length; i++)
+        {
+            Destroy(m_nonePotisions[i].transform.parent);
+            m_nonePotisions[i].SetActive(false);
+        }
+        m_nonePanel.SetActive(false);
+        Air();
     }
 
     public void Two()
     {
+        var remains = m_nonePotisions[1];
 
+        GameObject[] childObject = new GameObject[remains.transform.childCount];
+
+        m_playerManeger.m_playerGetRemains1.RemoveAt(1);
+
+        for (int i = 0; i < remains.transform.childCount; i++)
+        {
+            childObject[i] = remains.transform.GetChild(i).gameObject;
+        }
+
+        Destroy(m_playerManeger.Mass[m_playerManeger.PlayerMass[m_playerManeger.PlayerTurn]].transform.parent);
+        foreach (var g in childObject)
+            Instantiate(g, m_playerManeger.Mass[m_playerManeger.PlayerMass[m_playerManeger.PlayerTurn]].transform);
+        m_playerManeger.PlayerGet[m_playerManeger.PlayerTurn]--;
+        for (int i = 0; i < m_nonePotisions.Length; i++)
+        {
+            Destroy(m_nonePotisions[i].transform.parent);
+            m_nonePotisions[i].SetActive(false);
+        }
+        m_nonePanel.SetActive(false);
+        Air();
     }
 
     public void Three()
     {
+        var remains = m_nonePotisions[2];
 
+        GameObject[] childObject = new GameObject[remains.transform.childCount];
+
+        m_playerManeger.m_playerGetRemains1.RemoveAt(2);
+
+        for (int i = 0; i < remains.transform.childCount; i++)
+        {
+            childObject[i] = remains.transform.GetChild(i).gameObject;
+        }
+
+        Destroy(m_playerManeger.Mass[m_playerManeger.PlayerMass[m_playerManeger.PlayerTurn]].transform.parent);
+        foreach (var g in childObject)
+            Instantiate(g, m_playerManeger.Mass[m_playerManeger.PlayerMass[m_playerManeger.PlayerTurn]].transform);
+        m_playerManeger.PlayerGet[m_playerManeger.PlayerTurn]--;
+        for (int i = 0; i < m_nonePotisions.Length; i++)
+        {
+            Destroy(m_nonePotisions[i].transform.parent);
+            m_nonePotisions[i].SetActive(false);
+        }
+        m_nonePanel.SetActive(false);
+        Air();
     }
 
     public void Four()
     {
+        var remains = m_nonePotisions[3];
 
+        GameObject[] childObject = new GameObject[remains.transform.childCount];
+
+        m_playerManeger.m_playerGetRemains1.RemoveAt(3);
+
+        for (int i = 0; i < remains.transform.childCount; i++)
+        {
+            childObject[i] = remains.transform.GetChild(i).gameObject;
+        }
+
+        Destroy(m_playerManeger.Mass[m_playerManeger.PlayerMass[m_playerManeger.PlayerTurn]].transform.parent);
+        foreach (var g in childObject)
+            Instantiate(g, m_playerManeger.Mass[m_playerManeger.PlayerMass[m_playerManeger.PlayerTurn]].transform);
+        m_playerManeger.PlayerGet[m_playerManeger.PlayerTurn]--;
+        for (int i = 0; i < m_nonePotisions.Length; i++)
+        {
+            Destroy(m_nonePotisions[i].transform.parent);
+            m_nonePotisions[i].SetActive(false);
+        }
+        m_nonePanel.SetActive(false);
+        Air();
     }
 
     public void Five()
     {
+        var remains = m_nonePotisions[4];
 
+        GameObject[] childObject = new GameObject[remains.transform.childCount];
+
+        m_playerManeger.m_playerGetRemains1.RemoveAt(4);
+
+        for (int i = 0; i < remains.transform.childCount; i++)
+        {
+            childObject[i] = remains.transform.GetChild(i).gameObject;
+        }
+
+        Destroy(m_playerManeger.Mass[m_playerManeger.PlayerMass[m_playerManeger.PlayerTurn]].transform.parent);
+        foreach (var g in childObject)
+            Instantiate(g, m_playerManeger.Mass[m_playerManeger.PlayerMass[m_playerManeger.PlayerTurn]].transform);
+        m_playerManeger.PlayerGet[m_playerManeger.PlayerTurn]--;
+        for (int i = 0; i < m_nonePotisions.Length; i++)
+        {
+            Destroy(m_nonePotisions[i].transform.parent);
+            m_nonePotisions[i].SetActive(false);
+        }
+        m_nonePanel.SetActive(false);
+        Air();
     }
 
     public void Six()
     {
+        var remains = m_nonePotisions[5];
 
+        GameObject[] childObject = new GameObject[remains.transform.childCount];
+
+        m_playerManeger.m_playerGetRemains1.RemoveAt(5);
+
+        for (int i = 0; i < remains.transform.childCount; i++)
+        {
+            childObject[i] = remains.transform.GetChild(i).gameObject;
+        }
+
+        Destroy(m_playerManeger.Mass[m_playerManeger.PlayerMass[m_playerManeger.PlayerTurn]].transform.parent);
+        foreach (var g in childObject)
+            Instantiate(g, m_playerManeger.Mass[m_playerManeger.PlayerMass[m_playerManeger.PlayerTurn]].transform);
+        m_playerManeger.PlayerGet[m_playerManeger.PlayerTurn]--;
+        for (int i = 0; i < m_nonePotisions.Length; i++)
+        {
+            Destroy(m_nonePotisions[i].transform.parent);
+            m_nonePotisions[i].SetActive(false);
+        }
+        m_nonePanel.SetActive(false);
+        Air();
     }
 }
