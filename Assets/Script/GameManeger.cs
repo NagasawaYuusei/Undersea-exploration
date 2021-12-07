@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class GameManeger : MonoBehaviour
 {
@@ -8,17 +10,23 @@ public class GameManeger : MonoBehaviour
     [SerializeField] GameObject m_isekiTipOku;
     [SerializeField] GameObject m_nonePanel;
     [SerializeField] GameObject[] m_nonePotisions;
+    [SerializeField] GameObject m_roundOverText;
+    [SerializeField] Text m_nextRoundText;
     [SerializeField] Animator m_shipAnim;
     [SerializeField] Animator m_diceAnim;
     [SerializeField] string m_shipAnimName;
     [SerializeField] string m_randomDaiceAnimName;
     [SerializeField] PlayerManeger m_playerManeger;
+    [SerializeField] ShipManeger m_shipManager;
+    [SerializeField] RemainsManeger m_remainsManager;
     [SerializeField] GameObject m_none;
+    bool m_roundEnd;
+    int m_roundCount = 1;
 
 
     public void GameStart()
     {
-        Air();
+        m_remainsManager.SetBoard();
     }
 
     public void Air()
@@ -31,6 +39,13 @@ public class GameManeger : MonoBehaviour
         {
             m_playerManeger.PlayerTurn = 0;
         }
+
+        m_playerManeger.ShipAir();
+        if(m_playerManeger.ShipInAir >= 25)
+        {
+            m_roundEnd = true;
+        }
+
         m_shipAnim.Play(m_shipAnimName);
     }
 
@@ -63,7 +78,11 @@ public class GameManeger : MonoBehaviour
         m_isekiTipOku.SetActive(false);
         m_isekiTipHirou.SetActive(false);
         m_serchPanel.SetActive(false);
-        Air();
+        if(!m_roundEnd)
+        {
+            Air();
+        }
+
     }
 
     public void Isekitippuwohirou()
@@ -72,7 +91,10 @@ public class GameManeger : MonoBehaviour
         m_isekiTipOku.SetActive(false);
         m_isekiTipHirou.SetActive(false);
         m_serchPanel.SetActive(false);
-        Air();
+        if (!m_roundEnd)
+        {
+            Air();
+        }
     }
 
     public void Isekitippuwooku()
@@ -197,7 +219,10 @@ public class GameManeger : MonoBehaviour
             m_nonePotisions[i].SetActive(false);
         }
         m_nonePanel.SetActive(false);
-        Air();
+        if (!m_roundEnd)
+        {
+            Air();
+        }
     }
 
     public void Two()
@@ -223,7 +248,10 @@ public class GameManeger : MonoBehaviour
             m_nonePotisions[i].SetActive(false);
         }
         m_nonePanel.SetActive(false);
-        Air();
+        if (!m_roundEnd)
+        {
+            Air();
+        }
     }
 
     public void Three()
@@ -249,7 +277,10 @@ public class GameManeger : MonoBehaviour
             m_nonePotisions[i].SetActive(false);
         }
         m_nonePanel.SetActive(false);
-        Air();
+        if (!m_roundEnd)
+        {
+            Air();
+        }
     }
 
     public void Four()
@@ -275,7 +306,10 @@ public class GameManeger : MonoBehaviour
             m_nonePotisions[i].SetActive(false);
         }
         m_nonePanel.SetActive(false);
-        Air();
+        if (!m_roundEnd)
+        {
+            Air();
+        }
     }
 
     public void Five()
@@ -301,7 +335,10 @@ public class GameManeger : MonoBehaviour
             m_nonePotisions[i].SetActive(false);
         }
         m_nonePanel.SetActive(false);
-        Air();
+        if (!m_roundEnd)
+        {
+            Air();
+        }
     }
 
     public void Six()
@@ -327,6 +364,47 @@ public class GameManeger : MonoBehaviour
             m_nonePotisions[i].SetActive(false);
         }
         m_nonePanel.SetActive(false);
-        Air();
+        if (!m_roundEnd)
+        {
+            Air();
+        }
+    }
+
+    void RoundOver()
+    {
+        m_roundOverText.SetActive(true);
+        if(m_roundCount < 3)
+        {
+            m_roundCount++;
+            m_nextRoundText.text = "Next Round " + m_roundCount;
+
+            var remains = m_playerManeger.Mass[0];
+
+            GameObject[] childObject = new GameObject[remains.transform.childCount];//勝ったプレイヤーのオブジェクト
+
+            for (int i = 0; i < remains.transform.childCount; i++)
+            {
+                childObject[i] = remains.transform.GetChild(i).gameObject;
+            }
+
+            var list = new List<GameObject>();
+            list.AddRange(childObject);
+            string item = "Osaka";
+
+            if (list.Contains(item))
+            {
+                Console.WriteLine("{0}が見つかりました", item);
+            }
+            else
+            {
+                Console.WriteLine("{0}は見つかりませんでした", item);
+            }
+
+            Console.ReadKey();
+        }
+        else
+        {
+            m_nextRoundText.text = "Next Result " + m_roundCount;
+        }
     }
 }

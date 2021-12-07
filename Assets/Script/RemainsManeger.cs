@@ -10,6 +10,7 @@ public class RemainsManeger : MonoBehaviour
     [SerializeField] GameObject m_gokakukeiObject;
     [SerializeField] GameObject m_rokukakukeiObject;
     [SerializeField] GameObject[] m_space;
+    [SerializeField] PlayerManeger m_playerManeger;
 
     List<GameObject> m_remains = new List<GameObject>();
     int m_remainsRemaining;
@@ -27,7 +28,6 @@ public class RemainsManeger : MonoBehaviour
 private void Start()
     {
         SetUp();
-        SetBoard();
     }
 
     void SetUp()
@@ -229,5 +229,6 @@ private void Start()
                 m_maxBoard++;
             }
         }
+        m_playerManeger.SetPlayer();
     }
 }

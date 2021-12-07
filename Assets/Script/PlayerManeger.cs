@@ -127,6 +127,16 @@ public class PlayerManeger : MonoBehaviour
         m_playerBack = new bool[5];
     }
 
+    public void SetPlayer()
+    {
+        for(int i = 0; i < m_playerNum; i++)
+        {
+            m_mass[m_playerMass[0]].transform.parent = m_playerObject[i].transform;
+            m_playerObject[i].transform.position = new Vector3(0, 0, 0);
+        }
+        m_gameManeger.Air();
+    }
+
     public void Yes()//完成
     {
         m_playerBack[m_playerTurn] = true;
@@ -389,7 +399,7 @@ public class PlayerManeger : MonoBehaviour
         m_gameManeger.Serch();
     }
 
-    void ShipAir()
+    public void ShipAir()
     {
         if (m_playerTurn == 0)
         {
